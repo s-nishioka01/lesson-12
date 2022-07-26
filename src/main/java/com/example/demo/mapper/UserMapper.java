@@ -5,16 +5,15 @@ import java.util.Optional;
 import org.apache.ibatis.annotations.Mapper;
 
 import com.example.demo.entity.User;
-import com.example.demo.form.UserForm;
 
 @Mapper
 public interface UserMapper {
 
 	Optional<User> findOne(int id);
 
-	void save(UserForm userForm);
+	void save(String name);
 
-	void update(UserForm userForm);
+	void update(int id, String name);
 
 	void delete(int id);
 }

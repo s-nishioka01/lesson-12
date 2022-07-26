@@ -33,14 +33,13 @@ public class UserController {
 
 	@PostMapping("/users")
 	public ResponseEntity<String> createUser(@RequestBody UserForm userForm) {
-		userService.saveUserList(userForm);
+		userService.saveUserList(userForm.getName());
 		return ResponseEntity.created(URI.create("/users")).build();
 	}
 
 	@PatchMapping("/users/{id}")
 	public ResponseEntity<String> updateUser(@PathVariable("id") int id, @RequestBody UserForm userForm) {
-		userForm.setId(id);
-		userService.updateUserList(userForm);
+		userService.updateUserList(id, userForm.getName());
 		return ResponseEntity.ok("name successfully updated");
 	}
 
