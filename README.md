@@ -1,18 +1,18 @@
 # 第12回講義課題
 ## 課題の内容 
-REST APIの作成（GET/POST/PATCH/DELETEのリクエストを扱えるControllerの実装）
+REST APIの作成（GET/POST/PATCH/DELETEのリクエストを扱えるControllerの実装）  
 
 ## 構成要件
-Java 17
-Gradle 7.4.1
-Spring Boot 2.6.7
-Docker Desktop 4.8.7
-Docker Compose 2.5.0
-MySQL 8.0
+Java 17  
+Gradle 7.4.1  
+Spring Boot 2.6.7  
+Docker Desktop 4.8.7  
+Docker Compose 2.5.0  
+MySQL 8.0  
 MyBatis Spring Boot Starter 2.2.2  
 
 ## アプリケーションの内容
-- シンプルなIDとユーザーのリスト
+- シンプルなIDとユーザーのリスト  
 
 ## HTTPリクエスト
 - GET : クエリ文字列でidを受け取り、そのIDに対応したユーザーを返す  
