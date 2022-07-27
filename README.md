@@ -15,14 +15,14 @@ MyBatis Spring Boot Starter 2.2.2
 - シンプルなIDとユーザーのリスト  
 
 ## HTTPリクエスト
-- GET : クエリ文字列でidを受け取り、そのIDに対応したユーザーを返す  
+- GET : パス変数でidを受け取り、そのIDに対応したユーザーを返す  
 
-| <img width="869" alt="スクリーンショット 2022-07-26 1 22 46" src="https://user-images.githubusercontent.com/103230014/180907867-6a79b20f-5756-4914-b91c-93b1232c62db.png"> |
+| <img width="882" alt="スクリーンショット 2022-07-26 17 42 23" src="https://user-images.githubusercontent.com/103230014/181149765-66098664-4128-4354-8170-a4ca5f8b2edb.png"> |
 |:-:|
 
 - POST : ユーザーのIDとNAMEを送信し、ユーザーのデータを新規作成  
 
-| <img width="861" alt="スクリーンショット 2022-07-26 1 24 25" src="https://user-images.githubusercontent.com/103230014/180907912-8d0b8e03-b4ea-4f5c-a5f3-9388a74c6b59.png"> |
+| <img width="861" alt="スクリーンショット 2022-07-26 17 45 01" src="https://user-images.githubusercontent.com/103230014/181149830-1fa7c43c-c91d-43ec-9670-fba056740106.png"> |
 |:-:|
 
 | <img width="561" alt="スクリーンショット 2022-07-26 1 24 53" src="https://user-images.githubusercontent.com/103230014/180907931-be2cc482-46ba-42be-9df3-60acf7d0ce93.png"> |
@@ -30,7 +30,7 @@ MyBatis Spring Boot Starter 2.2.2
 
 - PATCH : ユーザーのIDとNAMEを送信し、URLで指定したIDに対応するユーザーのデータを更新  
 
-| <img width="865" alt="スクリーンショット 2022-07-26 1 26 32" src="https://user-images.githubusercontent.com/103230014/180907941-58c4c036-2c75-4030-a3a8-8aa260f1ffe6.png"> |
+| <img width="860" alt="スクリーンショット 2022-07-26 17 45 50" src="https://user-images.githubusercontent.com/103230014/181149939-ebabf74a-8744-4dde-82fa-c26a23f7c30e.png"> |
 |:-:|
 
 | <img width="499" alt="スクリーンショット 2022-07-26 1 26 40" src="https://user-images.githubusercontent.com/103230014/180907946-ffca79ab-c4aa-4140-9da6-a7b975626817.png"> |
