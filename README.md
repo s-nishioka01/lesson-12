@@ -33,7 +33,7 @@ MyBatis Spring Boot Starter 2.2.2
 | <img width="860" alt="スクリーンショット 2022-07-26 17 45 50" src="https://user-images.githubusercontent.com/103230014/181149939-ebabf74a-8744-4dde-82fa-c26a23f7c30e.png"> |
 |:-:|
 
-| <img width="499" alt="スクリーンショット 2022-07-26 1 26 40" src="https://user-images.githubusercontent.com/103230014/180907946-ffca79ab-c4aa-4140-9da6-a7b975626817.png"> |
+| <img width="359" alt="スクリーンショット 2022-07-26 17 45 54" src="https://user-images.githubusercontent.com/103230014/181150067-054c4d0c-a9ca-4ed0-aad9-871b89a5e1a7.png"> |
 |:-:|
 
 - DELETE : URLで指定したIDに対応するユーザーのデータを削除  
