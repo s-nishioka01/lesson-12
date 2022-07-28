@@ -33,8 +33,9 @@ public class UserController {
 
 	@PostMapping("/users")
 	public ResponseEntity<String> createUser(@RequestBody UserForm userForm) {
-		userService.saveUserList(userForm.getName());
-		return ResponseEntity.created(URI.create("/users")).build();
+		User user = new User();
+		userService.saveUserList(userForm.getName(), user);
+		return ResponseEntity.created(URI.create("/users/" + user.getId())).build();
 	}
 
 	@PatchMapping("/users/{id}")

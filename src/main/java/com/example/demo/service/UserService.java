@@ -20,8 +20,8 @@ public class UserService {
 		return userMapper.findOne(id).orElseThrow(() -> new Exception("データが登録されていません"));
 	}
 
-	public void saveUserList(String name) {
-		userMapper.save(name);
+	public void saveUserList(String name, User user) {
+		userMapper.save(name, user);
 	}
 
 	public void updateUserList(int id, String name) {
