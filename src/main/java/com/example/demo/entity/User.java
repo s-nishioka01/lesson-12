@@ -11,6 +11,14 @@ public class User {
 		this.name = name;
 	}
 
+	public User(String name) {
+		this.id = 0;
+		this.name = name;
+	}
+
+	public User() {
+	}
+
 	public int getId() {
 		return id;
 	}

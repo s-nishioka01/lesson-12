@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.User;
@@ -27,21 +26,20 @@ public class UserController {
 		this.userService = userService;
 	}
 
-	@GetMapping("/users")
-	public ResponseEntity<User> getUser(@RequestParam(name = "id") int id) throws Exception {
+	@GetMapping("/users/{id}")
+	public ResponseEntity<User> getUser(@PathVariable("id") int id) throws Exception {
 		return ResponseEntity.ok(userService.findOne(id));
 	}
 
 	@PostMapping("/users")
 	public ResponseEntity<String> createUser(@RequestBody UserForm userForm) {
-		userService.saveUserList(userForm);
-		return ResponseEntity.created(URI.create("/users")).build();
+		User user = userService.saveUserList(userForm.getName());
+		return ResponseEntity.created(URI.create("/users/" + user.getId())).build();
 	}
 
 	@PatchMapping("/users/{id}")
 	public ResponseEntity<String> updateUser(@PathVariable("id") int id, @RequestBody UserForm userForm) {
-		userForm.setId(id);
-		userService.updateUserList(userForm);
+		userService.updateUserList(id, userForm.getName());
 		return ResponseEntity.ok("name successfully updated");
 	}
 

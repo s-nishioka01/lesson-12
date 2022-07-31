@@ -6,8 +6,8 @@
     <select id="findOne" resultType="com.example.demo.entity.User">
     	SELECT * FROM users WHERE id = #{id}
     </select>
-    <insert id="save" useGeneratedKeys="true" keyProperty="id">
-    	INSERT INTO users (name) VALUES (#{name})
+    <insert id="save" useGeneratedKeys="true" keyProperty="user.id">
+    	INSERT INTO users (name) VALUES (#{user.name})
     </insert>
     <update id="update">
     	UPDATE users SET name = #{name} WHERE id = #{id}

@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.User;
-import com.example.demo.form.UserForm;
 import com.example.demo.mapper.UserMapper;
 
 @Service
@@ -21,12 +20,14 @@ public class UserService {
 		return userMapper.findOne(id).orElseThrow(() -> new Exception("データが登録されていません"));
 	}
 
-	public void saveUserList(UserForm userForm) {
-		userMapper.save(userForm);
+	public User saveUserList(String name) {
+		User user = new User(name);
+		userMapper.save(user);
+		return user;
 	}
 
-	public void updateUserList(UserForm userForm) {
-		userMapper.update(userForm);
+	public void updateUserList(int id, String name) {
+		userMapper.update(id, name);
 	}
 
 	public void deleteUserList(int id) {
