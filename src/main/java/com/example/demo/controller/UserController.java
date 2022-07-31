@@ -33,8 +33,7 @@ public class UserController {
 
 	@PostMapping("/users")
 	public ResponseEntity<String> createUser(@RequestBody UserForm userForm) {
-		User user = new User();
-		userService.saveUserList(userForm.getName(), user);
+		User user = userService.saveUserList(userForm.getName());
 		return ResponseEntity.created(URI.create("/users/" + user.getId())).build();
 	}
 
