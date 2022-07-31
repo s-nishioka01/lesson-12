@@ -12,7 +12,9 @@ public interface UserMapper {
 
 	Optional<User> findOne(int id);
 
-	void save(@Param("name") String name, @Param("user") User user);
+//	void save(@Param("name") String name, @Param("user") User user);
+
+	void save(@Param("user") User user);
 
 	void update(@Param("id") int id, @Param("name") String name);
 

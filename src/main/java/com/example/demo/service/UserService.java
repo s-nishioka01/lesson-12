@@ -21,8 +21,8 @@ public class UserService {
 	}
 
 	public User saveUserList(String name) {
-		User user = new User();
-		userMapper.save(name, user);
+		User user = new User(name);
+		userMapper.save(user);
 		return user;
 	}
 
